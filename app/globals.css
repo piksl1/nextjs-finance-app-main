@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply container mx-auto max-w-4xl bg-white text-black dark:bg-slate-950 dark:text-slate-100
+}

@@ -1,0 +1,36 @@
+{
+  "name": "next-14-finance-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "json-server": "json-server --watch db.json --port 3100"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.48.1",
+    "json-server": "^0.17.4",
+    "lucide-react": "^0.316.0",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-cookie": "^7.0.2",
+    "react-dom": "^18",
+    "react-error-boundary": "^4.0.12",
+    "react-hook-form": "^7.54.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.0.1",
+    "dotenv": "^16.4.7",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}

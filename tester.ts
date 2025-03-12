@@ -1,42 +1,30 @@
-/*Search Insert Position
+/* Length of Last Word
 Easy
 Topics
 Companies
-Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+Given a string s consisting of words and spaces, return the length of the last word in the string.
 
-You must write an algorithm with O(log n) runtime complexity.
+A word is a maximal substring consisting of non-space characters only.
 
  
 
 Example 1:
 
-Input: nums = [1,3,5,6], target = 5
-Output: 2
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
 Example 2:
 
-Input: nums = [1,3,5,6], target = 2
-Output: 1
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
 Example 3:
 
-Input: nums = [1,3,5,6], target = 7
-Output: 4
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
  */
-function searchInsert(nums: number[], target: number): number {
-  let left = 0;
-  let right = nums.length - 1;
-  let middle;
-
-  while (left <= right) {
-    middle = Math.floor((left + right) / 2);
-
-    if (nums[middle] === target) {
-      return middle;
-    } else if (nums[middle] < target) {
-      left = middle + 1;
-    } else {
-      right = middle - 1;
-    }
-  }
-
-  return left;
+function lengthOfLastWord(s: string): number {
+  const words = s.trim().split(" ");
+  return words[words.length - 1].length;
 }

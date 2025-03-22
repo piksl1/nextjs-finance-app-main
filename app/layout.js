@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import useServerDarkMode from "@/hooks/use-server-dark-mode";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   const theme = useServerDarkMode();
   return (
     <html lang="en" className={theme}>
+      <SpeedInsights />
       <body className={`${inter.className} min-h-screen flex flex-col px-8`}>
         {(process.env.NODE_ENV === "development" ||
           process.env.VERCEL_ENV === "preview") && (

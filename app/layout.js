@@ -17,6 +17,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={theme}>
       <body className={`${inter.className} min-h-screen flex flex-col px-8`}>
+        {(process.env.NODE_ENV === "development" ||
+          process.env.VERCEL_ENV === "preview") && (
+          // eslint-disable-next-line @next/next/no-sync-scripts
+          <script
+            data-recording-token="7dBir864aexYItOmzGlbVBBWhF9B3F8ye1JkwkEX"
+            data-is-production-environment="false"
+            src="https://snippet.meticulous.ai/v1/meticulous.js"
+          />
+        )}
         {children}
       </body>
     </html>
